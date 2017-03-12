@@ -1,0 +1,34 @@
+
+html, body, h1, h2, h3, h4, h5, h6 {
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.myBody {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.mySlide {
+	height: 400px;
+}
+
+.myCloud {
+	height: 70px;
+    background-image: url("/uploads/imgs/cloud.png");
+    background-repeat: repeat-x;
+}
+
+
+.myCategory:hover {
+
+	box-shadow: inset 0 8px 23px 2px rgba(0,0,0,.2)
+
+}
+
+.myCategorySelected{
+
+	box-shadow: inset 0 8px 23px 2px rgba(0,0,0,.2)
+
+}
+
