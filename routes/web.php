@@ -13,4 +13,10 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+
+Route::resource('/register','RegisterController');
+
+Route::post('/login','SessionsController@store')->name('login');
+Route::get('/logout','SessionsController@destroy')->name('logout');
+

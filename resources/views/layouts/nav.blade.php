@@ -11,7 +11,14 @@
 				     <a class="w3-bar-item w3-hover-blue" href="#">Form đăng kí</a>
 				</div>
 			</div>
-			<a class="w3-bar-item w3-button w3-hover-white w3-border w3-round w3-hover-text-blue" href="#" onclick="document.getElementById('loginForm').style.display='block'""  style="">Đăng Nhập</a>
+
+			@if(Auth::check())
+				<div class="w3-bar-item w3-btn w3-blue w3-hover-blue">Hi <b>{{ Auth::user()->name }}</b></div>
+				<a class="w3-bar-item w3-btn w3-blue w3-hover-blue" href="{{ route('logout') }}">Đăng xuất</a>
+			@else
+				<a class="w3-bar-item w3-btn w3-hover-white w3-border w3-round w3-hover-text-blue" href="#" onclick="document.getElementById('loginForm').style.display='block'""  style="">Đăng Nhập</a>
+			@endif
+
 		</div>
 	</div>
 </div>

@@ -5,6 +5,16 @@
 @section('content')
 
 <!-- Slide -->
+@if(Auth()->check())
+<div class="w3-container w3-blue w3-center w3-padding-48 w3-animate-zoom">
+	<div class="w3-padding w3-xxxlarge ">Xin chào <b>{{ Auth()->user()->name }}</b></div>
+	<div class="myBody w3-large w3-margin-bottom " style="max-width: 50%">Chúc bạn một ngày tốt lành</div>
+	<button class="w3-btn w3-light-green w3-text-white w3-xlarge w3-margin-top w3-round-large w3-padding-xlarge w3-border w3-border-green w3-bottombar w3-animate-opacity">Quản lý nội dung của tôi</button>
+</div>
+<div class="w3-blue myCloud">
+	<img class="">
+</div>
+@else
 <div class="w3-container w3-blue w3-center w3-padding-48 w3-animate-zoom">
 	<div class="w3-padding w3-xxxlarge ">Xây dựng bài Test và gửi cho bạn bè</div>
 	<div class="myBody w3-large w3-margin-bottom " style="max-width: 50%">Chỉ với một vài click, bạn đã có một bài Test trông vô cùng chuyên nghiệp</div>
@@ -13,6 +23,8 @@
 <div class="w3-blue myCloud">
 	<img class="">
 </div>
+
+@endif
 <!-- End Slide -->
 
 <!-- Page Content -->

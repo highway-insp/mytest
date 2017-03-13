@@ -2,7 +2,8 @@
 	<div class="w3-modal-content w3-card-8 w3-animate-zoom w3-container w3-round-large" style="max-width:600px">
 		<span onclick="document.getElementById('registerForm').style.display='none'" class="w3-closebtn w3-text-black w3-hover-text-blue w3-container w3-padding-8 w3-display-topright" title="Thoát">×</span>
 
-		<form class="w3-margin-top w3-padding-8">
+		<form class="w3-margin-top w3-padding-8" action="{{ route('register.store') }}" method="POST">
+			{{ csrf_field()}}
 			<div class="w3-text-grey w3-large"><b>Tạo tài khoản mới</b></div>
 
 			<input type="text" name="name" class="w3-input" placeholder="Yourname">
@@ -24,7 +25,9 @@
 	<div class="w3-modal-content w3-card-8 w3-animate-zoom w3-container w3-round-large" style="max-width:600px">
 		<span onclick="document.getElementById('loginForm').style.display='none'" class="w3-closebtn w3-text-black w3-hover-text-blue w3-container w3-padding-8 w3-display-topright" title="Thoát">×</span>
 
-		<form class="w3-margin-top w3-padding-8">
+		<form class="w3-margin-top w3-padding-8" action="{{route('login')}}" method="POST">>
+			{{csrf_field()}}
+
 			<div class="w3-text-grey w3-large"><b>Đăng nhập</b></div>
 
 			<input type="text" name="email" class="w3-input" placeholder="Username">
